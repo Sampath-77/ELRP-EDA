@@ -53,8 +53,8 @@ def _fig_bar(data, x, y, title, xlab, ylab, color=None, orientation='v', text=No
 
 @st.cache_data
 def load_main_data():
-    """Load final_datasett.csv — new dataset for all charts except trend."""
-    df = pd.read_csv(os.path.join(_HERE, "Data", "final_merged_datasett.csv"))
+    """Load final_merged_datasett.parquet — dataset for all charts except trend."""
+    df = pd.read_parquet(os.path.join(_HERE, "Data", "final_merged_datasett.parquet"))
     df.columns = df.columns.str.strip()
 
     # Vectorised date conversion (replaces slow row-by-row apply+lambda)
@@ -77,8 +77,8 @@ def load_main_data():
 
 @st.cache_data
 def load_coaching_data():
-    """Load final_merged_dataset.csv for Before/After Coaching trend."""
-    df = pd.read_csv(os.path.join(_HERE, "Data", "final_merged_dataset.csv"))
+    """Load final_merged_dataset.parquet for Before/After Coaching trend."""
+    df = pd.read_parquet(os.path.join(_HERE, "Data", "final_merged_dataset.parquet"))
     df.columns = df.columns.str.strip()
 
     df['score']        = pd.to_numeric(df['score'],        errors='coerce')
