@@ -1,0 +1,19 @@
+# Large data files - do not push to Git
+Data/*.csv
+Data/*.xlsx
+Data/*.xlsb
+data2/*.csv
+data2/*.xlsx
+
+# But allow parquet files (they are small enough)
+!Data/*.parquet
+!data2/*.parquet
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
