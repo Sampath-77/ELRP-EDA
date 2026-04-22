@@ -6,3 +6,4 @@ seaborn
 openpyxl
 plotly
 pyarrow
+statsmodels 
