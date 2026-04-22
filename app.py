@@ -8,11 +8,6 @@ import numpy as np
 
 import quality
 import overall
-import zipfile
-
-if not os.path.exists("Data"):
-    with zipfile.ZipFile("data_files.zip", 'r') as zip_ref:
-        zip_ref.extractall()
 
 BASE_DIR = os.path.dirname(__file__)
 
