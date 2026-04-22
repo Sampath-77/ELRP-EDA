@@ -138,7 +138,7 @@ def show():
         if os.environ.get("ATTRIQ_USE_PKL") and os.path.exists(PKL_RAW) and os.path.exists(PKL_ALL):
             return pickle.load(open(PKL_RAW,"rb")), pickle.load(open(PKL_ALL,"rb"))
         df = pd.read_csv(PERF_PATH)
-        df['Date']     = pd.to_datetime(df['Date'], dayfirst=True)
+        df['Date']     = pd.to_datetime(df['Date'], format='%m/%d/%Y')
         df['Agent_ID'] = df['Agent_ID'].astype(str).str.strip().str.upper()
         df['is_ghost'] = ((df['Calls_Answered'].fillna(0)==0) &
                         (df['Handle_Time_In_Hrs']==0) & (df['Productive_Hours']==0))
