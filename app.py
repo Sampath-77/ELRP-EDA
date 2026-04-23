@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-import performance
+import performance, clustering_tabs
 import os
 import numpy as np
 
@@ -25,7 +25,7 @@ def add_labels(ax):
 
 section = st.sidebar.radio(
     "Select Section",
-    ["Employee Demography", "Performance", "Quality & Coaching", "Overall"]
+    ["Employee Demography", "Performance", "Quality & Coaching", "Overall", "Clustering"]
 )
 if section != "Performance":
     st.markdown(
@@ -589,3 +589,6 @@ elif section == "Quality & Coaching":
 # ================= OVERALL =================
 elif section == "Overall":
     overall.show()    
+
+elif section == "Clustering":
+    clustering_tabs.show()

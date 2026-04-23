@@ -6,4 +6,5 @@ seaborn
 openpyxl
 plotly
 pyarrow
-statsmodels 
+statsmodels
+scikit-learn

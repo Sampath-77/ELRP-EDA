@@ -5,16 +5,8 @@ venv/
 convert.py
 size.py
 
-# Exclude large/unused data files
+# Exclude large unused CSVs
 Data/final_merged_dataset.csv
 Data/final_merged_datasett.csv
 Data/master_dataset.csv
 Data/master_dataset.xlsx
-Data/PH_Agent_Performance_Nov_2025.csv
-Data/PH_Agent_Performance_Nov_2025.xlsb
-Data/EMPLOYEE_DEMOGRAPHICS_Nov2025_synthetic.xlsx
-Data/Quality___Coaching_Data_Nov_2025.xlsx
-
-# OS files
-.DS_Store
-Thumbs.db
